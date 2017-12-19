@@ -1,0 +1,101 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bgsign1"
+    android:orientation="vertical"
+    android:weightSum="4">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="46dp"
+        android:layout_gravity="center"
+        android:layout_weight="0.15">
+
+        <ImageView
+            android:id="@+id/img1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:layout_weight="1"
+            android:contentDescription="@string/picture_of_user"
+            android:src="@drawable/stage_one" />
+
+        <ImageView
+            android:id="@+id/img2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:layout_weight="1"
+            android:contentDescription="@string/picture_of_user"
+            android:src="@drawable/stage_two" />
+
+        <ImageView
+            android:id="@+id/img3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:layout_weight="1"
+            android:contentDescription="@string/picture_of_user"
+            android:src="@drawable/stage_three" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/controllerTxt"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="3"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <ImageView
+            android:id="@+id/director_img"
+            style="@style/ThemeOverlay.FirebaseIcon"
+            android:layout_width="186dp"
+            android:layout_height="160dp"
+            android:contentDescription="@string/desc_firebase_lockup"
+            android:src="@drawable/director" />
+
+        <TextView
+            android:id="@+id/controller_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/title_bottom_margin"
+            android:paddingHorizontal="50dp"
+            android:text="@string/firebase_title_text"
+            android:textColor="?android:attr/colorBackground"
+            android:textSize="20sp"
+            android:theme="@style/ThemeOverlay.MyTitleText" />
+
+
+        <ImageView
+            android:id="@+id/user_img"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_margin="20dp"
+            android:adjustViewBounds="false"
+            android:contentDescription="@string/picture_of_user"
+            android:src="@drawable/user_icon" />
+
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:visibility="invisible">
+
+        <com.google.android.gms.common.SignInButton
+            android:id="@+id/googleSignInBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:visibility="invisible" />
+
+
+    </RelativeLayout>
+
+</LinearLayout>

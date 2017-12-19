@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">Director Master</string>
+    <string name="mute_on">Mute Service:\tON</string>
+    <string name="mute_off">Mute Service:OFF</string>
+
+
+    <string name="google_title_text">Authenticate with Google</string>
+    <string name="desc_firebase_lockup">Firebase logo and name</string>
+
+    <string name="picture_of_user">picture of user</string>
+
+
+    <string name="title_activity_maps">Map</string>
+    <string name="title_activity_tabbed">TabbedActivity</string>
+    <string name="title_tab_list">List</string>
+    <string name="title_tab_map">Map</string>
+
+
+
+</resources>
+
+
