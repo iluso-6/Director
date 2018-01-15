@@ -350,7 +350,7 @@ public class MapsActivity extends AppCompatActivity implements
         return distance;
     }
 
-
+ // comment
     @Override
     public void onCameraMoveStarted(int reason) {
 
