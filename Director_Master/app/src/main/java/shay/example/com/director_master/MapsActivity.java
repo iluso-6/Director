@@ -104,18 +104,7 @@ public class MapsActivity extends AppCompatActivity implements
 
         rg.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
 
-            //https://stackoverflow.com/users/2695282/syed-raza-mehdi
-            public float getZoomLevel() {
-                float zoomLevel;
-                if (circle != null) {
-                    double radius = circle.getRadius();
-                    double scale = radius / 250;// I modified this from 500
-                    zoomLevel = (float) (16 - Math.log(scale) / Math.log(2));
-                } else {
-                    zoomLevel = 17.5F;
-                }
-                return zoomLevel;
-            }
+
 
 
             @Override
@@ -156,6 +145,18 @@ public class MapsActivity extends AppCompatActivity implements
         });
 
 
+    }
+    //https://stackoverflow.com/users/2695282/syed-raza-mehdi
+    public float getZoomLevel() {
+        float zoomLevel;
+        if (circle != null) {
+            double radius = circle.getRadius();
+            double scale = radius / 250;// I modified this from 500
+            zoomLevel = (float) (16 - Math.log(scale) / Math.log(2));
+        } else {
+            zoomLevel = 17.5F;
+        }
+        return zoomLevel;
     }
 
     private void setMapStyle(int style) {
@@ -234,16 +235,27 @@ public class MapsActivity extends AppCompatActivity implements
                 Log.e("DataSnapshot circle", "" + geo_circle.child("lat").getValue());
                 double latitude = (double) geo_circle.child("lat").getValue();
                 double longitude = (double) geo_circle.child("lon").getValue();
+                long radius = (long) geo_circle.child("radius").getValue();
+                int rad = (int) radius;
                 initGeoCircleLocation = new LatLng(latitude, longitude);
                 // move the camera to the initial circle location
                 CameraPosition INIT =
                         new CameraPosition.Builder()
                                 .target(initGeoCircleLocation)
-                                .zoom(17.5F)
-                                .bearing(290F) // orientation
-                                .tilt(50F) // viewing angle
+                                .zoom(getZoomLevel())
+                                .bearing(270) // orientation
+                                .tilt(66) // viewing angle
                                 .build();
                 // use GoogleMap mMap to move camera into position
+                // make blue geo fence circle
+                circle = mMap.addCircle(new CircleOptions()
+                        .center(initGeoCircleLocation)
+                        .radius(rad)
+                        .strokeWidth(4f)
+                        .strokeColor(Color.argb(100, 63, 45, 255))
+                        .fillColor(Color.argb(100, 28, 152, 255)));
+
+                circle.setClickable(true);
                 mMap.animateCamera(CameraUpdateFactory.newCameraPosition(INIT));
             }
 
@@ -309,7 +321,9 @@ public class MapsActivity extends AppCompatActivity implements
             Log.e("circle != null", "remove");
             circle.remove();// clean up previous object if exists .. old habit from Lua
             circle = null;
-            radiusMarker.remove();// remove the pin image
+            if(radiusMarker!=null) {
+                radiusMarker.remove();// remove the pin image
+            }
         }
         onCreateCircle = true;
         latLng = loc;
@@ -407,7 +421,9 @@ public class MapsActivity extends AppCompatActivity implements
         Log.e("createNewCircle", "radius: " + radius);
         //   mMap.clear();
         // house cleaning
-        circle.remove();
+        if(circle!=null) {
+            circle.remove();
+        }
 
         // make final blue circle
         circle = mMap.addCircle(new CircleOptions()
