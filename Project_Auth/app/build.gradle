@@ -1,14 +1,6 @@
 apply plugin: 'com.android.application'
 
 android {
-    signingConfigs {
-        config {
-            keyAlias 'shay'
-            keyPassword '88522777'
-            storeFile file('C:/Users/Shay/Documents/Android_Projects/KEYSTORE/shay_store_path.jks')
-            storePassword '88522777'
-        }
-    }
     compileSdkVersion 26
     buildToolsVersion '26.0.2'
     defaultConfig {
