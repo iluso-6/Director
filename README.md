@@ -14,7 +14,12 @@ Main Application requirements<br>
 •	The database should be secure with read/write authorised rules<br> 
 •	Both applications will require Firebase authentication login as a result<br> 
 
+<p align="center">
+   <a href="https://youtu.be/bV8O21ZhRmw"><img width="460" height="300" src="http://img.youtube.com/vi/bV8O21ZhRmw/0.jpg"></a>
+</p>
 
+
+<br><br>
 <table>
   <tr>
     <td><img src="https://github.com/iluso-6/Director/blob/master/screenshots/auth.png?raw=true" align="left"/></td>
