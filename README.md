@@ -14,3 +14,41 @@ Main Application requirements<br>
 •	The database should be secure with read/write authorised rules<br> 
 •	Both applications will require Firebase authentication login as a result<br> 
 
+
+<table>
+  <tr>
+    <td><img src="https://github.com/iluso-6/Director/blob/master/screenshots/auth.png?raw=true" align="left"/></td>
+    <td width="33%"></td>
+    <td> <img src="https://github.com/iluso-6/Director/blob/master/screenshots/client_permission_dialog.png?raw=true" align="right"/>
+    </td>
+
+<br><br>
+
+  </tr>
+  
+</table>
+
+<table>
+  <tr>
+    <td><img src="https://github.com/iluso-6/Director/blob/master/screenshots/master.png?raw=true" align="left"/></td>
+    <td width="33%"></td>
+    <td> <img src="https://github.com/iluso-6/Director/blob/master/screenshots/master_map.png?raw=true" align="right"/>
+    </td>
+
+<br><br>
+
+  </tr>
+  
+</table>
+
+<table>
+  <tr>
+        <td width="33%"></td>
+    <td><img src="https://github.com/iluso-6/Director/blob/master/screenshots/master_map_night.png?raw=true" align="center"/></td>
+   
+
+<br><br>
+
+  </tr>
+  
+</table>
