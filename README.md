@@ -1,6 +1,6 @@
 # Director<br>
 # An application solution to mute mobile devices within a given geographical area<br>
-***Targets<br> 
+<br> 
 •	The client application should install and close while continuing a background location Service.<br> 
 •	The client Service should also be available trigger the speaker mute.<br> 
 •	The controller application should list the clients, their current status and show them on a map.<br> 
