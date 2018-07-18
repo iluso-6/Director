@@ -1,6 +1,6 @@
 # Director
 
-# An application solution to mute mobile devices within a given geographical area
+# An application solution ideally suited to film location management, to mute mobile devices within a given geographical area.
 
 This involves the use of <em>two</em> applications - a master and a client.
 
