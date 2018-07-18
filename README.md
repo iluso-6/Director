@@ -15,7 +15,7 @@ This involves the use of <em>two</em> applications - a master and a client.
 •	Both applications will require a common Firebase database<br> 
 •	The database should be secure with read/write authorised rules<br> 
 •	Both applications will require Firebase authentication login as a result<br> 
-
+<br><br>
 <p align="center">
    <a href="https://youtu.be/bV8O21ZhRmw"><img width="460" height="300" src="http://img.youtube.com/vi/bV8O21ZhRmw/0.jpg"></a>
 </p>
