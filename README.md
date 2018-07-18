@@ -17,6 +17,9 @@ This involves the use of <em>two</em> applications - a master and a client.
 •	Both applications will require Firebase authentication login as a result<br> 
 <br><br>
 <p align="center">
+   <b>Video Example</b>
+</p>
+<p align="center">
    <a href="https://youtu.be/bV8O21ZhRmw"><img width="460" height="300" src="http://img.youtube.com/vi/bV8O21ZhRmw/0.jpg"></a>
 </p>
 
